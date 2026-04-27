@@ -6,7 +6,7 @@ let db;
 async function connect() {
   if (db) return db;
   const uri = process.env.MONGODB_URI || 'mongodb://localhost:27017';
-  const dbName = process.env.DB_NAME || 'productivity_hub';
+  const dbName = process.env.DB_NAME || 'productivityhub';
   client = new MongoClient(uri);
   await client.connect();
   db = client.db(dbName);
